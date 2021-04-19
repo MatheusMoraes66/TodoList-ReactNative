@@ -1,14 +1,19 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
+//Components
+import Task from "./components/Task";
+
 export default function App() {
   return (
     <View style={styles.container}>
-      {/*Tasks*/}
       <View style={styles.tasksWrapper}>
-        <Text style={styles.sectionTitle}>Tarefas de Hoje</Text>
+        <Text style={styles.sectionTitle}>Tarefas</Text>
 
-        <View style={styles.items}></View>
+        <View style={styles.items}>
+          <Task text={"Fazer o dever"} />
+          <Task text={"Fazer o dever"} />
+        </View>
       </View>
     </View>
   );
@@ -24,8 +29,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   sectionTitle: {
-    fontsize: 24,
+    fontSize: 24,
     fontWeight: "bold",
   },
-  items: {},
+  items: { marginTop: 20 },
 });
